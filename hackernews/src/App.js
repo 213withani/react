@@ -60,9 +60,9 @@ class App extends Component {
 
 class Search extends Component {
   render() {
-    const { value, onChange } = this.props;
+    const { value, onChange, children } = this.props;
     return (
-      <form>
+      <form> {children}
         <input type="text" value={value} onChange={onChange} />
       </form>
     );
