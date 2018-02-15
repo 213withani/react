@@ -16,23 +16,6 @@ function isSearched(searchTerm) {
   }
 }
 
-const list = [{
-    title: "React",
-    url: "https://facebook.github.io/react/",
-    author: "Jordan Walke",
-    num_comments: 3,
-    points: 4,
-    objectID: 0
-  },
-  {
-    title: "Redux",
-    url: "https://github.com/reactjs/redux",
-    author: "Dan Abramov, Andrew Clark",
-    num_comments: 2,
-    points: 5,
-    objectID: 1
-  }
-];
 
 class App extends Component {
   constructor(props) {
@@ -46,6 +29,24 @@ class App extends Component {
     this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
     this.onDismiss = this.onDismiss.bind(this);
     this.onSearchChange = this.onSearchChange.bind(this);
+  }
+
+  setSearchTopStories(result) {
+    this.setState({
+      result
+    });
+  }
+  fetchSearchTopStories(searchTerm) {
+    fetch(`${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}`)
+      .then(response => response.json())
+      .then(result => this.setSearchTopStories(result))
+      .catch(e => e);
+  }
+  componentDidMount() {
+    const {
+      searchTerm
+    } = this.state;
+    this.fetchSearchTopStories(searchTerm);
   }
 
   onDismiss(id) {
@@ -84,8 +85,8 @@ class App extends Component {
       onDismiss = {
         this.onDismiss
       }
-      /> <
-      /div>
+      /> < /
+      div >
     );
   }
 }
@@ -108,8 +109,8 @@ class Search extends Component {
       onChange = {
         onChange
       }
-      /> <
-      /form>
+      /> < /
+      form >
     );
   }
 }
@@ -134,8 +135,8 @@ class Table extends Component {
             item.url
           } > {
             item.title
-          } < /a> <
-          /span> <
+          } < /a> < /
+          span > <
           span > {
             item.author
           } < /span> <
@@ -152,8 +153,8 @@ class Table extends Component {
           }
           type = "button" >
           Dismiss <
-          /button> <
-          /span> <
+          /button> < /
+          span > <
           /div>
         ))
       } <
