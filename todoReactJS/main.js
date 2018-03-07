@@ -1,4 +1,3 @@
-
 class Item extends React.Component {
   constructor(props) {
     super(props);
@@ -7,16 +6,15 @@ class Item extends React.Component {
       list: []
     };
     this.eventHandler = this.eventHandler.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this); 
-    
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   eventHandler(e) {
     this.setState({ itemValue: e.target.value });
   }
-  
+
   handleSubmit(e) {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
       itemValue: "",
       list: [...this.state.list, this.state.itemValue]
@@ -28,11 +26,14 @@ class Item extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>Todo</label>
-          <input type="text" onChange={this.eventHandler} value={this.state.itemValue}/>
-         </form>
-        
-         
-        <ul>{this.state.list.map((item)=><li>{item}</li>)} </ul>
+          <input
+            type="text"
+            onChange={this.eventHandler}
+            value={this.state.itemValue}
+          />
+        </form>
+
+        <ul>{this.state.list.map(item => <li>{item}</li>)} </ul>
       </div>
     );
   }
