@@ -47,7 +47,7 @@ console.log( store.getState() );
 ## Simple working action, reduce and store implemenatation.
 Reducers listen to every sigle action that is sent. 
 
-```javascript
+```js
 //Here goes the create-react-app default imports
 import {createStore} from 'redux';
 
@@ -75,5 +75,41 @@ console.log( store.getState() );
 
 // output: 
 // State
+// New state
+```
+
+## Real world store/reduce/action with CombineReducers.
+Reducers listen to every sigle action that is sent. 
+
+```js
+//Here goes the create-react-app default imports
+import {combineReducers, createStore} from 'redux';
+
+// A reducer is just a function that takes initial state and action.
+function prodcutsReducer(state=[], action) {
+ return state;
+}
+
+// A reducer is just a function that takes initial state and action.
+function userReducer(state='', action) {
+ return state;
+}
+
+const allReducers = combineReducers({
+ products: productsReducer,
+ user:userReducer
+});
+
+// reducer param is needed otw an error is thrown.
+const store = createStore(allReducers);
+console.log( store.getState() );
+
+ReactDOM.render(
+ <App />,
+ document.getElementById('root')
+);
+
+// output: 
+// {products: Array(0), user:""} This comes from allReducers and showing the default state [] and ''
 // New state
 ```
