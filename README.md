@@ -119,15 +119,15 @@ ReactDOM.render(
 
 ```
 
-## Real world store/reduce/action with CombineReducers.
-### 
+## Working real world store/reduce/action that updates user.
+###
 
 ```js
 //Here goes the create-react-app default imports
 import {combineReducers, createStore} from 'redux';
 
 // A reducer is just a function that takes initial state and action.
-function prodcutsReducer(state=[], action) {
+function prodcutsReducer(state=[], {type, payload}) {
  return state;
 }
 
@@ -152,6 +152,7 @@ const store = createStore(allReducers, {
 });
 console.log( store.getState() );
 
+// type is what shows up in Redux devtools on the left hand side
 const updateUserAction = {
  type: 'updateUser',
  payload: {
@@ -160,6 +161,49 @@ const updateUserAction = {
 };
 
 store.dispatch(updateUserAction);
+
+ReactDOM.render(
+ <App />,
+ document.getElementById('root')
+);
+
+// output: 
+// {products: Array(0), user:"John"} 
+
+```
+
+## Working real world store/reduce/action that updates user.
+### userReducer actin argument is destructured
+
+```js
+//Here goes the create-react-app default imports
+import {combineReducers, createStore} from 'redux';
+
+// A reducer is just a function that takes initial state and action.
+function prodcutsReducer(state=[], {type, payload}) {
+ return state;
+}
+
+// A reducer is just a function that takes initial state and action.
+function userReducer(state='', {type, payload}) {
+ switch (type){
+  case 'updateUser':
+   return payload;
+ }
+ return state;
+}
+
+const allReducers = combineReducers({
+ products: productsReducer,
+ user:userReducer
+});
+
+// reducer param is needed otw an error is thrown.
+const store = createStore(allReducers, {
+ products: [{name: 'iPhone'}],
+ user: 'Michael'
+});
+
 
 ReactDOM.render(
  <App />,
