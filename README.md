@@ -44,8 +44,8 @@ const store = createStore(reducer);
 console.log( store.getState() );
 
 ```
-## Simple working store, reducer and action implemenatation
-Reduce listens to every sigle action that is sent. 
+## Simple working action, reduce and store implemenatation.
+Reducers listen to every sigle action that is sent. 
 
 ```
 //Here goes the create-react-app default imports
@@ -54,7 +54,7 @@ import {createStore} from 'redux';
 // A reducer is just a function that takes initial state and action.
 function reducer(state, action) {
  if (action.type === 'changeState'){
-  return action.payload.newState;
+  return action.payload.newState; // return action.payload value
  }
  return 'State';
 }
