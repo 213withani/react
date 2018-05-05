@@ -219,3 +219,20 @@ ReactDOM.render(
 // 
 
 ```
+# App.js connect App component to redux store
+## import from 'react-redux'
+
+import {connect} from 'react-redux'
+
+class App extends Component {
+ render() {
+  return <div className = "App"></App>
+ }
+}
+
+const mapStateToProps = state => {
+ return state;
+}
+
+// mapStateToProps = map store state to component props
+export default connect(mapStateToProps)(App);
