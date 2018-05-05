@@ -79,7 +79,9 @@ console.log( store.getState() );
 ```
 
 ## Real world store/reduce/action with CombineReducers.
-Reducers listen to every sigle action that is sent. 
+### combineReducers takes an obj that have key with state value
+### default state
+### createStore with default state
 
 ```js
 //Here goes the create-react-app default imports
@@ -101,7 +103,10 @@ const allReducers = combineReducers({
 });
 
 // reducer param is needed otw an error is thrown.
-const store = createStore(allReducers);
+const store = createStore(allReducers, {
+ products: [{name: 'iPhone'}],
+ user: 'Michael'
+});
 console.log( store.getState() );
 
 ReactDOM.render(
