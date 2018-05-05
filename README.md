@@ -30,7 +30,7 @@ Open your IDE. Currently I'm using Visual Code. Atom, Sublime or others can be u
 Go to src/index.js
 
 ## Simple working store and reducer implemenatation
-```
+```js
 //Here goes the create-react-app default imports
 import {createStore} from 'redux';
 
@@ -47,7 +47,7 @@ console.log( store.getState() );
 ## Simple working action, reduce and store implemenatation.
 Reducers listen to every sigle action that is sent. 
 
-```
+```javascript
 //Here goes the create-react-app default imports
 import {createStore} from 'redux';
 
