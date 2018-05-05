@@ -30,6 +30,7 @@ Open your IDE. Currently I'm using Visual Code. Atom, Sublime or others can be u
 Go to src/index.js
 
 ## Simple working store and reducer implemenatation
+```
 //Here goes the create-react-app default imports
 
 import {createStore} from 'redux';
@@ -67,3 +68,4 @@ const action = {
   newState: 'New State'
  }
 }
+```
