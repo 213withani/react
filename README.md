@@ -32,42 +32,48 @@ Go to src/index.js
 ## Simple working store and reducer implemenatation
 ```
 //Here goes the create-react-app default imports
-
 import {createStore} from 'redux';
 
 // A reducer is just a function
-
 function reducer() {
  return 'State';
 }
 
 // reducer param is needed otw an error is thrown.
-
 const store = createStore(reducer);
 console.log( store.getState() );
 
 ```
 ## Simple working store, reducer and action implemenatation
+Reduce listens to every sigle action that is sent. 
+
 ```
 //Here goes the create-react-app default imports
-
 import {createStore} from 'redux';
 
-// A reducer is just a function
-
-function reducer() {
+// A reducer is just a function that takes initial state and action.
+function reducer(state, action) {
+ if (action.type === 'changeState'){
+  return action.payload.newState;
+ }
  return 'State';
 }
 
 // reducer param is needed otw an error is thrown.
-
 const store = createStore(reducer);
 console.log( store.getState() );
 
 const action = {
  type: 'changeState',
  payload: {
-  newState: 'New State'
+  newState: 'New state'
  }
-}
+};
+
+store.dispatch(action);
+console.log( store.getState() );
+
+// output: 
+// State
+// New state
 ```
