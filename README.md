@@ -174,10 +174,12 @@ ReactDOM.render(
 
 ## Working real world store/reduce/action that updates user.
 ### userReducer actin argument is destructured
+## User Provider. Wrap your root component with Provider so components can access store.
 
 ```js
 //Here goes the create-react-app default imports
 import {combineReducers, createStore} from 'redux';
+import {Provider} from 'react-redux';
 
 // A reducer is just a function that takes initial state and action.
 function prodcutsReducer(state=[], {type, payload}) {
@@ -206,11 +208,14 @@ const store = createStore(allReducers, {
 
 
 ReactDOM.render(
- <App />,
+ <Provider store={store}> 
+  <App />
+ </Provider >
+  ,
  document.getElementById('root')
 );
 
 // output: 
-// {products: Array(0), user:"John"} 
+// 
 
 ```
