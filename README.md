@@ -46,7 +46,9 @@ function reducer() {
 const store = createStore(reducer);
 console.log( store.getState() );
 
+```
 ## Simple working store, reducer and action implemenatation
+```
 //Here goes the create-react-app default imports
 
 import {createStore} from 'redux';
