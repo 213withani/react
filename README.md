@@ -1,6 +1,16 @@
 # react
 react sample projects
 
+# Tech stack
+react
+redux
+react-redux
+react-apollo
+react-i18next
+radium
+prop-types
+lodash
+
 # Redux
 
 ## Simple Overview
