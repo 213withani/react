@@ -140,7 +140,7 @@ const allReducers = combineReducers({
 });
 
 // 2nd parameter is default values.
-const store = createStore(allReducers, {
+const store = createStore( allReducers, {
  products: [{name: 'iPhone'}],
  user: 'Michael'
 });
@@ -158,15 +158,17 @@ ReactDOM.render(
 ```
 Retrieve state from store will return object from combined reducers (allReducers).
 
-## Working real world store/reduce/action that updates user.
+## Working real world store/reduce/action to udpate user.
 ###
+Third parameter to createStore for dev tools.
+Lets update store and see what happens. Dispatch action to store. Update user.
 
 ```js
 //Here goes the create-react-app default imports
 import {combineReducers, createStore} from 'redux';
 
 // A reducer is just a function that takes initial state and action.
-function prodcutsReducer(state=[], {type, payload}) {
+function prodcutsReducer(state=[], action) {
  return state;
 }
 
@@ -221,6 +223,10 @@ ReactDOM.render(
 ### userReducer actin argument is destructured
 ## User Provider. Wrap your root component with Provider so components can access store.
 
+
+Use ES6 destructuring.
+User Provider to allow store access to our component. Now our app can access the store.
+
 ```js
 //Here goes the create-react-app default imports
 import {combineReducers, createStore} from 'redux';
@@ -266,6 +272,9 @@ ReactDOM.render(
 ```
 # App.js connect App component to redux store
 ## import from 'react-redux'
+connect takes 3 arguments
+Args: 
+1. mapStateToProps that passes store state to component.
 
 import {connect} from 'react-redux'
 
