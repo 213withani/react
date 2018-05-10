@@ -28,6 +28,11 @@ https://www.youtube.com/watch?v=OSSpVLpuVWA&t=926s
 Manage state through a one direction data flow model.
 
 ### Store, actions and reducers: 
+Store is one big object. Entire state.
+Actions are objects. Actions are sent from the view which are payloads that can be read by reducers.
+Reducers are functions. They ready the payload from the actions and update the store/master state.
+
+
 UI triggers/sent/dispatch Actions that are payloads that can be read by Reducers then update the Store (Master State).
 
 UI triggers actions/objects that are sent to reducers/functions that update the store/object.
