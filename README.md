@@ -272,9 +272,9 @@ ReactDOM.render(
 ```
 # App.js connect App component to redux store
 ## import from 'react-redux'
-connect takes 3 arguments
+connect is a function that takes 3 arguments
 Args: 
-1. mapStateToProps that passes store state to component.
+1. mapStateToProps receives state of the store, and we can use that state to decide what props to provide to that component.
 
 import {connect} from 'react-redux'
 
