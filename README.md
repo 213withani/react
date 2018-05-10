@@ -295,7 +295,7 @@ export default connect(mapStateToProps)(App);
 ## import from 'react-redux'
 connect is a function that takes 3 arguments
 Args: 
-1. mapStateToProps: R eceives state of the store, and we can use that state to decide what props to provide to that component.
+1. mapStateToProps: Receives state of the store, and we can use that state to decide what props to provide to that component.
 2. mapActionsToProps or mapDispatchToProps: Allows us to easily dispatch actions from our components so we don't need to use distpatch we can just call functions that automatically dispatch actions to the store.
 
 
@@ -335,11 +335,56 @@ export function updateUser(newUser) {
  }
 } 
 
+user-reducers.js
+
+import {UPDATE_USER} from '../actions/user-actions'
+ 
 export default function userReducer(state='', {type, payload}) {
  switch(type) {
-  case 'updateUser':
-   return payload;
+  case UPDATE_USER:
+   return payload.user;
   default: 
    return state;
  }
 }
+
+# App.jsmapStateToProps
+# App.js 
+```js
+import {connect} from 'react-redux'
+import { updateUser } from './actions/user-actions';
+
+class App extends Component {
+ construction(props){
+  super(props);
+  
+  tthis.onUpdateUser = this.onUpdateUser.bind(this);
+ }
+ 
+ onUpdateUser() {
+  this.props.onUpdateUser('Sammy');
+ }
+ 
+ render() {
+  return 
+   <div className = "App">
+   ...
+   <div onClick={this.onUpdateUser}>Update user </div>
+   {this.props.user}
+   </App>
+ }
+}
+
+// Use parentheses to automatically return the object.
+const mapStateToProps = state => ({
+ products: state.products,
+ user: state.user
+});
+
+const mapActionsToProps = {
+ onUpdateUser: updateUser
+};
+
+// mapStateToProps = map store state to component props
+export default connect(mapStateToProps, mapActionsToProps)(App);
+```
