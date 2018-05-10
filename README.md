@@ -437,3 +437,109 @@ const mapActionsToProps = {
 // mapStateToProps = map store state to component props
 export default connect(mapStateToProps, mapActionsToProps)(App);
 ```
+
+# Index.js Using Passes Props
+# Index.js mapStateToProps
+```js
+//Here goes the create-react-app default imports
+import {combineReducers, createStore} from 'redux';
+import {Provider} from 'react-redux';
+
+// A reducer is just a function that takes initial state and action.
+function prodcutsReducer(state=[], {type, payload}) {
+ return state;
+}
+
+// A reducer is just a function that takes initial state and action.
+function userReducer(state='', {type, payload}) {
+ switch (type){
+  case 'updateUser':
+   return payload;
+ }
+ return state;
+}
+
+const allReducers = combineReducers({
+ products: productsReducer,
+ user:userReducer
+});
+
+// reducer param is needed otw an error is thrown.
+const store = createStore(allReducers, {
+ products: [{name: 'iPhone'}],
+ user: 'Michael'
+});
+
+
+ReactDOM.render(
+ <Provider store={store}> 
+  <App aRandomProps = 'Whatever'/>
+ </Provider >
+  ,
+ document.getElementById('root')
+);
+
+// output: 
+// 
+
+```
+# App.js
+
+```js
+import {connect} from 'react-redux'
+import { updateUser } from './actions/user-actions';
+
+class App extends Component {
+ construction(props){
+  super(props);
+  
+  tthis.onUpdateUser = this.onUpdateUser.bind(this);
+ }
+ 
+ // The onchange value is sent to the store.
+ onUpdateUser(event) {
+  this.props.onUpdateUser(event.target.value);
+ }
+ 
+ render() {
+ // Output: 
+ {
+  aRandomProps: "Whatever", 
+  products: Array(1
+  user: "Michael"
+  userPlusProp: "Michael Whatever",
+  onUpdateUser: f
+ }
+  console.log(this.props);
+  
+  return 
+   <div className = "App">
+   ...
+   <input onChange={this.onUpdateUser} / >
+   {this.props.user}
+   </App>
+ }
+}
+
+// Use parentheses to automatically return the object.
+// Remove automatic return, parentheses
+
+const mapStateToProps = (state, props) => {
+// props aRandomProps = 'Whatever' was passed from App component.
+// output: {aRandomProp: "Whatever"}
+ console.log(props) 
+ 
+ return {
+  products: state.products,
+  user: state.user,
+  userPlusProp: `${state.user} ${props.aRandomProps}`
+ }
+};
+
+const mapActionsToProps = {
+ onUpdateUser: updateUser
+};
+
+// mapStateToProps = map store state to component props
+export default connect(mapStateToProps, mapActionsToProps)(App);
+```
