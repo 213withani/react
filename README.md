@@ -321,3 +321,25 @@ const mapActionsToProps = {
 export default connect(mapStateToProps, mapActionsToProps)(App);
 
 # Create constants in acttions file since the constants will be used in reducers file too. Constants will be used in multiple places: actions and reducers.
+
+user-actions.js
+// users: is just namespacing for var conflicts
+export const UPDATE_USER = 'users:updateUser';
+
+export function updateUser(newUser) {
+ return {
+  type: UPDATE_USER,
+  payload: {
+   user: newUser
+  }
+ }
+} 
+
+export default function userReducer(state='', {type, payload}) {
+ switch(type) {
+  case 'updateUser':
+   return payload;
+  default: 
+   return state;
+ }
+}
