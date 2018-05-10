@@ -45,6 +45,7 @@ UI triggers actions/objects that are sent to reducers/functions that update the 
 5. yarn start
 
 ## IDE
+https://codeburst.io/top-javascript-vscode-extensions-for-faster-development-c687c39596f5
 Open your IDE. Currently I'm using Visual Code. Atom, Sublime or others can be used.
 
 Go to src/index.js
