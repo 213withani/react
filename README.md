@@ -139,11 +139,12 @@ const allReducers = combineReducers({
  user:userReducer
 });
 
-// reducer param is needed otw an error is thrown.
+// 2nd parameter is default values.
 const store = createStore(allReducers, {
  products: [{name: 'iPhone'}],
  user: 'Michael'
 });
+
 console.log( store.getState() );
 
 ReactDOM.render(
@@ -155,6 +156,7 @@ ReactDOM.render(
 // {products: Array(0), user:""} This comes from allReducers and showing the default state [] and ''
 
 ```
+Retrieve state from store will return object from combined reducers (allReducers).
 
 ## Working real world store/reduce/action that updates user.
 ###
@@ -183,10 +185,16 @@ const allReducers = combineReducers({
 });
 
 // reducer param is needed otw an error is thrown.
-const store = createStore(allReducers, {
- products: [{name: 'iPhone'}],
- user: 'Michael'
-});
+const store = createStore(
+ allReducers, 
+ {
+  products: [{name: 'iPhone'}],
+  user: 'Michael'
+ },
+ window.devToolsExtension && window.devToolsExtension()
+ 
+);
+
 console.log( store.getState() );
 
 // type is what shows up in Redux devtools on the left hand side
