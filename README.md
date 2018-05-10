@@ -270,8 +270,10 @@ ReactDOM.render(
 // 
 
 ```
+
 # App.js connect App component to redux store
 ## import from 'react-redux'
+```js
 connect is a function that takes 3 arguments
 Args: 
 1. mapStateToProps: R eceives state of the store, and we can use that state to decide what props to provide to that component.
@@ -290,6 +292,8 @@ const mapStateToProps = state => {
 
 // mapStateToProps = map store state to component props
 export default connect(mapStateToProps)(App);
+```
+
 
 # App.js connect App component to redux store
 ## import from 'react-redux'
@@ -298,7 +302,7 @@ Args:
 1. mapStateToProps: Receives state of the store, and we can use that state to decide what props to provide to that component.
 2. mapActionsToProps or mapDispatchToProps: Allows us to easily dispatch actions from our components so we don't need to use distpatch we can just call functions that automatically dispatch actions to the store.
 
-
+```js
 import {connect} from 'react-redux'
 
 class App extends Component {
@@ -319,9 +323,10 @@ const mapActionsToProps = {
 
 // mapStateToProps = map store state to component props
 export default connect(mapStateToProps, mapActionsToProps)(App);
+```
 
 # Create constants in acttions file since the constants will be used in reducers file too. Constants will be used in multiple places: actions and reducers.
-
+```js
 user-actions.js
 // users: is just namespacing for var conflicts
 export const UPDATE_USER = 'users:updateUser';
@@ -347,9 +352,10 @@ export default function userReducer(state='', {type, payload}) {
    return state;
  }
 }
+```
 
-# App.jsmapStateToProps
-# App.js 
+# App.js mapStateToProps
+# App.js Label that updates user on click by dispatching action in App component.
 ```js
 import {connect} from 'react-redux'
 import { updateUser } from './actions/user-actions';
@@ -370,6 +376,49 @@ class App extends Component {
    <div className = "App">
    ...
    <div onClick={this.onUpdateUser}>Update user </div>
+   {this.props.user}
+   </App>
+ }
+}
+
+// Use parentheses to automatically return the object.
+const mapStateToProps = state => ({
+ products: state.products,
+ user: state.user
+});
+
+const mapActionsToProps = {
+ onUpdateUser: updateUser
+};
+
+// mapStateToProps = map store state to component props
+export default connect(mapStateToProps, mapActionsToProps)(App);
+```
+
+
+# App.js mapStateToProps
+# App.js Input that updates user on change by dispatching action in App component.
+```js
+import {connect} from 'react-redux'
+import { updateUser } from './actions/user-actions';
+
+class App extends Component {
+ construction(props){
+  super(props);
+  
+  tthis.onUpdateUser = this.onUpdateUser.bind(this);
+ }
+ 
+ // The onchange value is sent to the store.
+ onUpdateUser(event) {
+  this.props.onUpdateUser(event.target.value);
+ }
+ 
+ render() {
+  return 
+   <div className = "App">
+   ...
+   <input onChange={this.onUpdateUser} / >
    {this.props.user}
    </App>
  }
