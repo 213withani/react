@@ -50,6 +50,7 @@ Open your IDE. Currently I'm using Visual Code. Atom, Sublime or others can be u
 Go to src/index.js
 
 ## Simple working store and reducer implemenatation
+
 ```js
 //Here goes the create-react-app default imports
 import {createStore} from 'redux';
@@ -63,8 +64,13 @@ function reducer() {
 const store = createStore(reducer);
 console.log( store.getState() );
 
+// output:
+// State
 ```
-## Simple working action, reduce and store implemenatation.
+Retreive state from the store means getting the state that the reducer set. In this case a string. Maybe try to understand how this is implemented under the hood.
+
+## Simple working action, reducer and store implemenatation.
+Action: An object with type and payload.
 Reducers listen to every sigle action that is sent. 
 
 ```js
@@ -97,11 +103,22 @@ console.log( store.getState() );
 // State
 // New state
 ```
+Simple action that sets new state as string. 
+Send action to store.
+Reducer reads an action to update store state. Also it has state as a parameter to know initial  state.
+Reducers listen to every single action that is sent so they have to figure out what to do diff for every action.
+
+Since the action is sent to store, these means reducers will be able to read it, check with console log. Based on the action the reducer will update store.
+
+
 
 ## Real world store/reduce/action with CombineReducers.
 ### combineReducers takes an obj that have key with state value
 ### default state
 ### createStore with default state
+
+Store.getState() just returns the object from allReducers.
+Getting the state from the store will return the object from all combined reducers.
 
 ```js
 //Here goes the create-react-app default imports
