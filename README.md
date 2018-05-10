@@ -274,7 +274,7 @@ ReactDOM.render(
 ## import from 'react-redux'
 connect is a function that takes 3 arguments
 Args: 
-1. mapStateToProps receives state of the store, and we can use that state to decide what props to provide to that component.
+1. mapStateToProps: R eceives state of the store, and we can use that state to decide what props to provide to that component.
 
 import {connect} from 'react-redux'
 
@@ -290,3 +290,34 @@ const mapStateToProps = state => {
 
 // mapStateToProps = map store state to component props
 export default connect(mapStateToProps)(App);
+
+# App.js connect App component to redux store
+## import from 'react-redux'
+connect is a function that takes 3 arguments
+Args: 
+1. mapStateToProps: R eceives state of the store, and we can use that state to decide what props to provide to that component.
+2. mapActionsToProps or mapDispatchToProps: Allows us to easily dispatch actions from our components so we don't need to use distpatch we can just call functions that automatically dispatch actions to the store.
+
+
+import {connect} from 'react-redux'
+
+class App extends Component {
+ render() {
+  return <div className = "App"></App>
+ }
+}
+
+// Use parentheses to automatically return the object.
+const mapStateToProps = state => ({
+ products: state.products,
+ user: state.user
+});
+
+const mapActionsToProps = {
+
+};
+
+// mapStateToProps = map store state to component props
+export default connect(mapStateToProps, mapActionsToProps)(App);
+
+# Create constants in acttions file since the constants will be used in reducers file too. Constants will be used in multiple places: actions and reducers.
