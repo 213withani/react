@@ -11,6 +11,11 @@ radium
 prop-types
 lodash
 
+# libraries
+
+action creators, redux thunk:HOF / HOC / thunk / closure
+https://daveceddia.com/what-is-a-thunk/
+
 # Redux
 
 ## Simple Overview
