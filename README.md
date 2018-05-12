@@ -2,7 +2,7 @@
 react sample projects
 
 # Tech stack
-react
+* react
 redux
 react-redux
 react-apollo
