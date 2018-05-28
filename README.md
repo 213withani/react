@@ -1,3 +1,10 @@
+# React fullstack book
+Components: Self contained.
+
+React components render HTML which is displayed in the browser.
+
+DOM refers to the browser's HTML tree
+
 # react
 react sample projects
 
