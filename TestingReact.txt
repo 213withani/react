@@ -1,2 +1,10 @@
+google search: jest react testing
+About 1,300,000 results (0.38 seconds) 
+
 Quick samples/snippets
 https://github.com/nhunzaker/jest-5-minutes
+
+"mount method in this example just to imitate full dom rendering"
+https://codeburst.io/react-jest-enzyme-how-to-cook-in-5-mins-efba2046998e
+
+https://www.sitepoint.com/test-react-components-jest/
