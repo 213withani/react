@@ -1,1 +1,2 @@
+Quick samples/snippets
 https://github.com/nhunzaker/jest-5-minutes
