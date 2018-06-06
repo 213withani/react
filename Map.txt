@@ -1,2 +1,11 @@
-# Map basics: Explaining putting together react and map api
-https://medium.com/front-end-hacking/using-the-google-maps-javascript-api-in-a-react-project-b3ed734375c6
+# Map basics: 
+
+https://medium.com/front-end-hacking/simplified-google-maps-api-in-a-react-app-46981441d2c9
+
+https://github.com/facebook/create-react-app
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+Note: I had to use npx, using npm wouldn't work
