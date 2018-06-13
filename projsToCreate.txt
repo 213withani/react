@@ -3,6 +3,11 @@ Simple Weather App not finished something to get started.
 
 https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-expo-fe7066e02c09
 
+
+AWS - React Native
+https://medium.com/react-native-training/building-serverless-mobile-applications-with-react-native-aws-740ecf719fce
+
+
 ______
 Create the following games:
 https://codeburst.io/learning-react-js-by-building-a-minesweeper-game-ced9d41560ed
