@@ -7,6 +7,8 @@ https://blog.expo.io/building-a-minimalist-weather-app-with-react-native-and-exp
 AWS - React Native
 https://medium.com/react-native-training/building-serverless-mobile-applications-with-react-native-aws-740ecf719fce
 
+Weboack - Babel
+https://hackernoon.com/how-to-build-a-react-project-from-scratch-using-webpack-4-and-babel-56d4a26afd32
 
 ______
 Create the following games:
