@@ -1,7 +1,7 @@
 # React fullstack book
 
 ## Components
-### Page 1-100
+### Pages 1-100
 
 Components: Self contained.
 
