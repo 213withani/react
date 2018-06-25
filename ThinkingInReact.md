@@ -37,4 +37,9 @@ FilterableProductTable
  
 Components that appear within another component in the mock should appear as a child in the hierarchy
 
-const category = this.props.category; // My input is category
+
+ProductCategoryRow : const category = this.props.category; // My input is a category name.
+
+ProductRow: const product = this.props.product; // My input is a product obj.
+
+ProductTable: display each {category, price, stocked, name}
