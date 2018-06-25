@@ -1,7 +1,7 @@
 # Thinking in React
 https://reactjs.org/docs/thinking-in-react.html
 
-how it makes you think about apps as you build them
+how it makes you think about apps ### as you build them
 
 [Building a] searchable product
 
