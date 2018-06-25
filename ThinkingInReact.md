@@ -27,7 +27,9 @@ five components in our simple app
 FilterableProductTable 
  SearchBar : user input
  ProductTable : data collection
-  ProductCategoryRow : Category heading
-  ProductRow :  
+  ProductCategoryRow : Create a category heading
+  ProductRow : Display name and price. Color name based on stocked 
  
 Components that appear within another component in the mock should appear as a child in the hierarchy
+
+const category = this.props.category; // My input is category
