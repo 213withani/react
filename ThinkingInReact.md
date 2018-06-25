@@ -8,9 +8,11 @@ how it makes you think about apps as you build them
 # Start with a mock
 
 JSON API available
+
 Mock from designer
 
 json api structure: 
+
 {category, price, stocked, name}
 
 # Step 1: Break The UI 
@@ -26,8 +28,11 @@ five components in our simple app
 
 FilterableProductTable 
  SearchBar : user input
+ 
  ProductTable : data collection
+ 
   ProductCategoryRow : Create a category heading
+  
   ProductRow : Display name and price. Color name based on stocked 
  
 Components that appear within another component in the mock should appear as a child in the hierarchy
