@@ -78,6 +78,8 @@ ex keep a todo list copy, then compute length and use as count
 * checkbox value - state
 * filtered list
 
+The search text and the checkbox seem to be state since they change over time and can’t be computed from anything.
+
 ## Find State
 
 1. parent via props?
