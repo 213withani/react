@@ -24,5 +24,10 @@ Since you’re often displaying a JSON data model to a user, your UI ... will ma
 
 five components in our simple app
 
-
+FilterableProductTable 
+ SearchBar : user input
+ ProductTable : data collection
+  ProductCategoryRow : Category heading
+  ProductRow :  
  
+Components that appear within another component in the mock should appear as a child in the hierarchy
