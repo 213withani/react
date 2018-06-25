@@ -60,3 +60,21 @@ On larger projects, it’s easier to go [build] bottom-up and write tests as you
 The components will only have render() methods since this is a static version of your app. [Basically no private methods or other methods yet.]
 
 one-way data flow (also called one-way binding)
+
+# Step 3: Identify The Minimal (but complete) Representation Of UI State
+
+UI interactive : trigger changes
+
+minimal set of mutable state
+
+minimal representation of state : compute everything else 
+
+ex keep a todo list copy, then compute length and use as count
+
+## Data
+
+* products
+* search text
+* checkbox value
+* filtered list
+
