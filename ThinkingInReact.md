@@ -38,8 +38,25 @@ FilterableProductTable
 Components that appear within another component in the mock should appear as a child in the hierarchy
 
 
+# Step 2: Build A Static Version in React
+
+
 ProductCategoryRow : const category = this.props.category; // My input is a category name.
 
 ProductRow: const product = this.props.product; // My input is a product obj.
 
 ProductTable: display each {category, price, stocked, name}
+
+takes your data model and renders the UI but has no interactivity
+
+building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. 
+
+props are a way of passing data from parent to child.
+
+State is reserved only for interactivity, that is, data that changes over time.
+
+On larger projects, it’s easier to go [build] bottom-up and write tests as you build.
+
+The components will only have render() methods since this is a static version of your app. [Basically no private methods or others yet.]
+
+one-way data flow (also called one-way binding)
