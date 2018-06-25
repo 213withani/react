@@ -74,7 +74,12 @@ ex keep a todo list copy, then compute length and use as count
 ## Data
 
 * products
-* search text
-* checkbox value
+* search text - state
+* checkbox value - state
 * filtered list
 
+## Find State
+
+1. parent via props?
+2. remain unchanged?
+3. can you compute it?
