@@ -1,7 +1,7 @@
 # Thinking in React
 https://reactjs.org/docs/thinking-in-react.html
 
-how it makes you think about apps ### as you build them
+how it makes you think about apps as you build them
 
 [Building a] searchable product
 
@@ -13,7 +13,8 @@ Mock from designer
 json api structure: 
 {category, price, stocked, name}
 
-# Step 1: Break The UI Into A Component Hierarchy
+# Step 1: Break The UI 
+Into A Component Hierarchy
 
 draw boxes around every component ... with names
 
