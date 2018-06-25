@@ -21,3 +21,8 @@ draw boxes around every component ... with names
 a component should ideally only do one thing. [Otherwise create] smaller subcomponents.
 
 Since you’re often displaying a JSON data model to a user, your UI ... will map nicely
+
+five components in our simple app
+
+
+ 
