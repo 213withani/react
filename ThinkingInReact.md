@@ -85,3 +85,21 @@ The search text and the checkbox seem to be state since they change over time an
 1. parent via props?
 2. remain unchanged?
 3. can you compute it?
+
+# Step 4: Identify Where Your State Should Live
+which component should own what state
+
+* renders based on state
+* common owner component
+* component higher up to own state
+* otw create new component to only own state
+
+ProductTable needs to filter the product list based on state and SearchBar needs to display the search text and checked state.
+
+## It conceptually makes sense for the filter text and checked value to live in FilterableProductTable
+
+this.state = {filterText: '', inStockOnly: false} // init state
+
+pass filterText and inStockOnly to ProductTable and SearchBar as a prop. 
+
+Step 5: Add Inverse Data Flow
