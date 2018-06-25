@@ -103,3 +103,8 @@ this.state = {filterText: '', inStockOnly: false} // init state
 pass filterText and inStockOnly to ProductTable and SearchBar as a prop. 
 
 Step 5: Add Inverse Data Flow
+
+# Step 5: Add Inverse Data Flow
+The form components deep in the hierarchy need to update the state in FilterableProductTable.
+
+FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated.
