@@ -45,4 +45,28 @@ React components ultimately render HTML which is displayed in the browser.
 render() describes the view.
 
 React allows us to describe a component’s HTML representation in JavaScript.
+
+DOM = HTML Tree
+
+JSX presents a light abstraction over the JavaScript version
  
+# Babel
+ Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
+ 
+```
+ app-1.js
+class ProductList extends React.Component {
+  render() {
+    return (
+      <div >
+        Hello, friend! I am a basic React component.
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <ProductList />,
+  document.getElementById('content')
+);
+```
