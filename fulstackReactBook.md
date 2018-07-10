@@ -50,11 +50,11 @@ DOM = HTML Tree
 
 JSX presents a light abstraction over the JavaScript version
  
-# Babel
+## Babel
  Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
  
-```
- app-1.js
+### app-1.js
+js```
 class ProductList extends React.Component {
   render() {
     return (
