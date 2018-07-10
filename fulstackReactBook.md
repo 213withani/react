@@ -38,3 +38,11 @@ The markup, view logic, and often component-specific style is all housed in one 
 In React, when the inputs for a component change, the framework simply re-renders that component.
 
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
+
+## JSX
+React components ultimately render HTML which is displayed in the browser.
+
+render() describes the view.
+
+React allows us to describe a component’s HTML representation in JavaScript.
+ 
