@@ -54,7 +54,7 @@ JSX presents a light abstraction over the JavaScript version
  Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
  
 ### app-1.js
-js```
+```js
 class ProductList extends React.Component {
   render() {
     return (
