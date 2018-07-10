@@ -19,7 +19,7 @@ Browser will open to localhost:3000 and serve voting_app/index.html
 
 For this project, we’re using Semantic UI for styling.
 
-```
+```js
 <div>
  <h1>Popular Products</h1>
  <div id="content"></div>
@@ -54,11 +54,38 @@ JSX presents a light abstraction over the JavaScript version
  Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
  
 ### app-1.js
+render this ProductList inside a specific DOM node
+
 ```js
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Project One</title>
+  <link rel="stylesheet" href="./semantic-dist/semantic.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="vendor/babel-standalone.js"></script>
+  <script src="vendor/react.js"></script>
+  <script src="vendor/react-dom.js"></script>
+</head>
+
+<body>
+  <div class="main ui text container">
+    <h1 class="ui dividing centered header">Popular Products</h1>
+    <div id="content"></div>
+  </div>
+  <script src="./js/seed.js"></script>
+  <script type="text/babel" data-plugins="transform-class-properties" src="./js/app-1.js"></script>
+
+</body>
+
+</html>
+
 class ProductList extends React.Component {
   render() {
     return (
-      <div >
+      <div>
         Hello, friend! I am a basic React component.
       </div>
     );
