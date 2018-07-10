@@ -19,3 +19,22 @@ Browser will open to localhost:3000 and serve voting_app/index.html
 
 For this project, we’re using Semantic UI for styling.
 
+```
+<div>
+ <h1>Popular Products</h1>
+ <div id="content"></div>
+</div>
+```
+
+Building a React app is all about components.
+
+1. ProductList: Contains a list of product components 
+2. Product: Displays a given product
+
+Self-contained and reusable: 
+
+The markup, view logic, and often component-specific style is all housed in one place. 
+
+In React, when the inputs for a component change, the framework simply re-renders that component.
+
+Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
