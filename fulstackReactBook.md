@@ -260,3 +260,9 @@ class Product extends React.Component {
 By calling super(props), we’re invoking that constructor() function first.
 
 We’re redefining the component method handleUpVote(), setting it to the same function but bound to this (the component). Now, whenever handleUpVote() executes, this will reference the component as opposed to null.
+
+Our next task is to update the vote count on the product.
+
+At the moment, our app doesn’t have a place to store and manage data.
+
+What our app is currently missing is state.
