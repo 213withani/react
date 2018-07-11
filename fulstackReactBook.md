@@ -266,3 +266,28 @@ Our next task is to update the vote count on the product.
 At the moment, our app doesn’t have a place to store and manage data.
 
 What our app is currently missing is state.
+
+## Using state
+
+Whereas props are immutable and owned by a component’s parent, state is owned by the component. this.state is private to the component and as we’ll see can be updated with this.setState().
+
+Because we are mutating the data for our products (the number of votes), we should consider this data to be stateful. ProductList will be the owner of this state. It will then pass this state down as props to Product.
+
+When adding state to a component, the first thing we do is define what the initial state should look like. Because constructor() is called when initializing our component, it’s the best place to define our initial state.
+
+In React components, state is an object.
+
+```
+voting_app/public/js/app-7.js
+class ProductList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+  }; 
+}
+  componentDidMount() {
+    this.setState({ products: Seed.products });
+}
+```
+
