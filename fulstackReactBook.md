@@ -190,5 +190,12 @@ The way data flows from parent to child in React is through props.
 
 When a parent renders a child, it can send along props the child depends on.
 
+Declaration of props:
+<Component [propName]=[propValue]/>
 
+Use Props:
+{Obj.property}
 
+Now the ProductList component is passing props down to Product. 
+
+In React, a component can access all its props through the object this.props.
