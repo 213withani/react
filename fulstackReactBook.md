@@ -278,16 +278,56 @@ When adding state to a component, the first thing we do is define what the initi
 In React components, state is an object.
 
 ```
-voting_app/public/js/app-7.js
 class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
-  }; 
-}
+    }; 
+  }
   componentDidMount() {
     this.setState({ products: Seed.products });
+  }
+```
+
+React invokes one lifecycle method, componentDid- Mount(), after our component has mounted to the page. 
+
+For all state modifications after the initial state, React provides components the method this.setState(). 
+
+The component will mount with an empty state this.state.products array. After mounting, we populate the state with data from Seed. The component will re-render and our products will be displayed. This happens at a speed that is imperceptible to the user.
+
+## Updating state and immutability
+setState() is actually asynchronous. There is no guarantee when React will update the state and re-render our component. 
+
+Don't use .push inside setState(). concat() creates a new array that contains the elements of the array it was called on followed by the elements passed in as arguments.
+
+Treat the state object as immutable. It’s important to understand which Array and Object methods modify the objects they are called on.
+
+Instead, we should create a new array of products. And if we modify one of the product objects, we should modify a clone of the object as opposed to the original one.
+
+```
+voting_app/public/js/app-9.js
+  // Inside `ProductList`
+  handleProductUpVote(productId) {
+    const nextProducts = this.state.products.map((product) => {
+      if (product.id === productId) {
+        return Object.assign({}, product, {
+          votes: product.votes + 1,
+});
+} else {
+        return product;
+      }
+    });
+    this.setState({
+      products: nextProducts,
+    });
 }
+
+```
+
+we check if the current product matches productId. If it does, we create a new object, copying over the properties from the original product object. We then overwrite the votes property on our new product object. We set it to the incremented vote count.
+
+```
+Object.assign({}, product, {votes: product.votes + 1,})
 ```
 
