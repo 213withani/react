@@ -173,13 +173,18 @@ img {
 
 Because it runs in the browser as JavaScript, we cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
 
-## The data model
+We now have two React components being rendered in our app.
+
+## Making Product data-driver
+### The data model
+Seed.products
 
 ### Using Props
 We want to modify our Product component so that it no longer uses static, hard-coded attributes.
 
 Product should accept data passed down from its parent ProductList
 
-Structure enables ProudctList to render any number of Product components that each have their own unique attributes
+Structure in this way enables our ProductList component to dynamically render any number of Product components.
 
 The way data flows from parent to child in React is through props.
+
