@@ -150,6 +150,25 @@ ReactDOM.render(
   document.getElementById('content')
 );
 
+// CSS file
+.product {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.avatar > img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
 ```
 
 Because it runs in the browser as JavaScript, we cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
