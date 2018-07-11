@@ -13,3 +13,6 @@ so input can be used somewhere else
 
 # React Architecture
 https://speakerdeck.com/vjeux/oscon-react-architecture
+
+# Passing Data Between React Components
+https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17
