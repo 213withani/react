@@ -102,5 +102,5 @@ ReactDOM.render([what], [where]);
 
 In React, native HTML elements always start with a lowercase letter whereas React component names always start with an uppercase letter.
 
-To recap, we wrote a React component using an ES6 class as well as JSX.
+To recap, we wrote a React component using an ES6 class as well as JSX. We specified that we wanted Babel to transpile this code to ES5. We then used ReactDOM.render() to write this component to the DOM.
 
