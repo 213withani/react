@@ -175,7 +175,7 @@ Because it runs in the browser as JavaScript, we cannot use any reserved JavaScr
 
 We now have two React components being rendered in our app.
 
-## Making Product data-driver
+## Making Product data-driven
 ### The data model
 Seed.products
 
@@ -187,4 +187,8 @@ Product should accept data passed down from its parent ProductList
 Structure in this way enables our ProductList component to dynamically render any number of Product components.
 
 The way data flows from parent to child in React is through props.
+
+When a parent renders a child, it can send along props the child depends on.
+
+
 
