@@ -104,3 +104,52 @@ In React, native HTML elements always start with a lowercase letter whereas Reac
 
 To recap, we wrote a React component using an ES6 class as well as JSX. We specified that we wanted Babel to transpile this code to ES5. We then used ReactDOM.render() to write this component to the DOM.
 
+```js
+
+
+class ProductList extends React.Component {
+  render() {
+    return (
+      <div className='ui unstackable items'>
+        <Product />
+      </div>
+    );
+  }
+}
+
+class Product extends React.Component {
+  render() {
+    return (
+      <div className="product">
+
+        <div className="productImg">
+          <img src='images/products/image-aqua.png' />
+        </div>
+
+        <div className="descAndImg">
+
+          <div className="description">
+            <a>Fort Knight</a>
+            <p>Authentic renaissance actors, delivered in just two weeks.</p>
+          </div>
+
+          <div className="avatar">
+            <span>Submitted by:</span>
+            <img src='images/avatars/daniel.jpg'/>
+          </div>
+
+        </div>
+
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <ProductList />,
+  document.getElementById('content')
+);
+
+```
+
+Because it runs in the browser as JavaScript, we cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
