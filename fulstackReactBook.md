@@ -331,3 +331,32 @@ we check if the current product matches productId. If it does, we create a new o
 Object.assign({}, product, {votes: product.votes + 1,})
 ```
 
+We use Object.assign() a lot for avoiding mutating objects.
+
+While we’re creating a new array, the variable product here still references the product object sitting on the original array in state. Therefore, if we make changes to it we’ll be modifying the object in state. So we use Object.assign() to clone the original into a new object and then modify the votes property on that new object.
+
+# Refactoring with the Babel plugin
+We’ve been using Babel in this project to give us the ability to write modern JavaScript.
+
+ES6 (ES2015), JSX => ES5 JS
+
+With the transform-class-properties plugin, we can write handleUpVote as an arrow function. This will ensure this inside the function is bound to the component
+
+Using this feature, we can drop constructor(). There is no need for the manual binding call.
+
+If we write a custom component method in which we want this bound to the component, we write it as an arrow function.
+
+### SUMMARY
+In sum, we can use property initializers to make two refactors to our React components:
+1. We can use arrow functions for custom component methods (and avoid having to bind this)
+2. We can define the initial state outside of constructor()
+
+
+1. We think about and organize our React apps as components 2. UsingJSXinsidetherendermethod
+3. Data flows from parent to children through props
+4. Event flows from children to parent through functions
+5. Utilizing React lifecycle methods
+6. Stateful components and how state is different from props 7. How to manipulate state while treating it as immutable
+
+# Components
+## A time-logging app
