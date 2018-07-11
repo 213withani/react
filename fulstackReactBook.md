@@ -199,3 +199,64 @@ Use Props:
 Now the ProductList component is passing props down to Product. 
 
 In React, a component can access all its props through the object this.props.
+
+Interweaving props with HTML elements in this way is how we create dynamic, data-driven React components.
+
+Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
+
+## Rendering multiple products
+
+### Array's map
+Builds a new array by using the return value from each function call.
+
+This page still lacks interactivity.
+
+React's true power: creating dynamic interfaces.
+
+Let’s start with something simple: the ability to up-vote a given product.
+
+## React the vote (your app’s first interaction)
+When the up-vote button on each one of the Product components is clicked, we expect it to update the votes attribute for that Product, increasing it by one.
+
+While the child can read its props, it can’t modify them.
+
+We need a way for the Product component to let ProductList know that a click on its up-vote icon occurred. We can then have ProductList, the owner of the product’s data, update the vote count for that product. The updated data will then flow downward from the ProductList component to the Product component.
+
+## Propagating the event
+We know that parents communicate data to children through props. Because props are immutable, children need some way to communicate events to parents. The parents could then make whatever data changes might be necessary.
+
+Functions passed down through props are the canonical manner in which children communicate events with their parent components.
+
+We’ll start by having up-votes log a message to the console.
+
+Work you way up. For example here put a log message instead of creating the feature end to end, create them step by step.
+
+In React, we can use the special attribute onClick to handle mouse click events.
+
+When the user clicks the up-vote icon, it will trigger a chain of function calls:
+1. User clicks the up-vote icon.
+2. ReactinvokesProductcomponent’shandleUpVote.
+3. handleUpVote invokes its prop onVote. This function lives inside the parent ProductList and
+logs a message to the console.
+
+Here’s the odd part: When working inside render(), we’ve witnessed that this is always bound to the component. But inside our custom component method handleUpVote(), this is actually null.
+
+## Binding custom component methods
+
+For the render() function, React binds this to the component for us.
+
+So, any time we define our own custom component methods, we have to manually bind this to the component ourselves.
+
+```js
+voting_app/public/js/app-6.js
+class Product extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleUpVote = this.handleUpVote.bind(this);
+  }
+
+```
+
+By calling super(props), we’re invoking that constructor() function first.
+
+We’re redefining the component method handleUpVote(), setting it to the same function but bound to this (the component). Now, whenever handleUpVote() executes, this will reference the component as opposed to null.
