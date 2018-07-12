@@ -83,6 +83,7 @@ ReactDOM.render([what], [where]);
 
 ### Product Component
 #### ProductList now renders Product Component
+We now have two React components being rendered in our app.
 ```js
 class ProductList extends React.Component {
   render() {
@@ -123,10 +124,9 @@ ReactDOM.render(
   document.getElementById('content')
 );
 ```
-
+#### JSX
 Because it runs in the browser as JavaScript, we cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
 
-We now have two React components being rendered in our app.
 
 ### Making Product data-driven
 #### The data model
