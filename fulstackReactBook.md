@@ -81,6 +81,8 @@ ReactDOM.render([what], [where]);
 * We specified that we wanted Babel to transpile ES6 code to ES5. 
 * We then used ReactDOM.render() to write this component to the DOM.
 
+### Product Component
+#### ProductList now renders Product Component
 ```js
 class ProductList extends React.Component {
   render() {
