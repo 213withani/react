@@ -130,7 +130,7 @@ We cannot use any reserved JavaScript words in JSX. class is a reserved word. Th
 
 ## Making Product data-driven
 ### The data model
-Seed.products
+* Seed.products
 
 ### Using Props
 #### Product Component
@@ -143,19 +143,13 @@ Seed.products
 * When a parent renders a child, it can send along props the child depends on.
 
 #### Props
-* Declaration of props:
-<Component [propName]=[propValue]/>
-
-* Use Props:
-{Obj.property}
-
+* Declaration of props: <Component [propName]=[propValue]/>
 * Now the ProductList component is passing props down to Product. 
 * In React, a component can access all its props through the object this.props.
 
-#### Dynamic, data driven components
-Interweaving props with HTML elements in this way is how we create dynamic, data-driven React components.
-
-Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
+### SUMMARY (Dynamic, data driven components)
+* Interweaving props with HTML elements in this way is how we create dynamic, data-driven React components.
+* Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
 
 ### Rendering multiple products
 
