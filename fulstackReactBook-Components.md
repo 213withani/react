@@ -31,11 +31,8 @@ Not only does this separation of responsibilities keep components simple, but it
  
  TimersDashboard: Parent container
 * EditableTimerList: Displays a list of timer containers
-
-** EditableTimer: Displays either a timer or a timer’s edit form · Timer: Displays a given timer
-
-*** TimerForm: Displays a given timer’s edit form
+  * EditableTimer: Displays either a timer or a timer’s edit form · Timer: Displays a given timer
+    * TimerForm: Displays a given timer’s edit form
 
 * ToggleableTimerForm: Displays a form to create a new timer
-
-** TimerForm (not displayed): Displays a new timer’s create form
+  * TimerForm (not displayed): Displays a new timer’s create form
