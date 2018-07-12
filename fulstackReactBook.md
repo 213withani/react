@@ -49,40 +49,15 @@ Using JSX enables us to write the markup for our component views in a familiar, 
 
 ### JSX
 * JSX represents a light abstraction over the JavaScript version.
-* React components ultimately render HTML which is displayed in the browser.
 * React allows us to describe a component’s HTML representation in JavaScript.
 * render() describes the view.
+* React components ultimately render HTML which is displayed in the browser.
 * DOM = HTML Tree
  
 ### app-1.js
 render this ProductList inside a specific DOM node
 
 ```js
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Project One</title>
-  <link rel="stylesheet" href="./semantic-dist/semantic.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <script src="vendor/babel-standalone.js"></script>
-  <script src="vendor/react.js"></script>
-  <script src="vendor/react-dom.js"></script>
-</head>
-
-<body>
-  <div class="main ui text container">
-    <h1 class="ui dividing centered header">Popular Products</h1>
-    <div id="content"></div>
-  </div>
-  <script src="./js/seed.js"></script>
-  <script type="text/babel" data-plugins="transform-class-properties" src="./js/app-1.js"></script>
-
-</body>
-
-</html>
-
 class ProductList extends React.Component {
   render() {
     return (
@@ -101,9 +76,10 @@ ReactDOM.render(
 
 ReactDOM.render([what], [where]);
 
-In React, native HTML elements always start with a lowercase letter whereas React component names always start with an uppercase letter.
-
-To recap, we wrote a React component using an ES6 class as well as JSX. We specified that we wanted Babel to transpile this code to ES5. We then used ReactDOM.render() to write this component to the DOM.
+### SUMMARY:
+* we wrote a React component using an ES6 class as well as JSX. 
+* We specified that we wanted Babel to transpile ES6 code to ES5. 
+* We then used ReactDOM.render() to write this component to the DOM.
 
 ```js
 
