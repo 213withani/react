@@ -36,3 +36,18 @@ Not only does this separation of responsibilities keep components simple, but it
 
 * ToggleableTimerForm: Displays a form to create a new timer
   * TimerForm (not displayed): Displays a new timer’s create form
+
+## The steps for building React apps from scratch
+Ultimately, our top-level component will communicate with a server.
+
+It will simplify things for us if we start off with static components.
+
+This will enable us to lay the framework for the app, getting a clear idea of how the component tree is organized.
+
+Next
+* determine state
+* in which component it should live
+* start off by just hard-coding the state
+
+At that point, we’ll have the data flow from parent to child in place. Then we can add inverse data flow, propagating events from child to parent.
+
