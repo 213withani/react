@@ -1,11 +1,11 @@
 # First React Web Application
 
 ## Building Product Hunt
-## Simple voting app 
+### Simple voting app 
 
 React approach to front end development.
 
-## Getting started
+### Getting started
 React’s most important concepts at a high-level before diving into them in subsequent sections.
 
 All products are sorted instantaneously by number of votes.
@@ -39,7 +39,7 @@ In React, when the inputs for a component change, the framework simply re-render
 
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
 
-## JSX
+### JSX
 React components ultimately render HTML which is displayed in the browser.
 
 render() describes the view.
@@ -49,9 +49,6 @@ React allows us to describe a component’s HTML representation in JavaScript.
 DOM = HTML Tree
 
 JSX presents a light abstraction over the JavaScript version
- 
-## Babel
- Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
  
 ### app-1.js
 render this ProductList inside a specific DOM node
@@ -175,11 +172,11 @@ Because it runs in the browser as JavaScript, we cannot use any reserved JavaScr
 
 We now have two React components being rendered in our app.
 
-## Making Product data-driven
-### The data model
+### Making Product data-driven
+#### The data model
 Seed.products
 
-### Using Props
+#### Using Props
 We want to modify our Product component so that it no longer uses static, hard-coded attributes.
 
 Product should accept data passed down from its parent ProductList
@@ -204,9 +201,9 @@ Interweaving props with HTML elements in this way is how we create dynamic, data
 
 Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
 
-## Rendering multiple products
+### Rendering multiple products
 
-### Array's map
+#### Array's map
 Builds a new array by using the return value from each function call.
 
 This page still lacks interactivity.
@@ -215,14 +212,14 @@ React's true power: creating dynamic interfaces.
 
 Let’s start with something simple: the ability to up-vote a given product.
 
-## React the vote (your app’s first interaction)
+### React the vote (your app’s first interaction)
 When the up-vote button on each one of the Product components is clicked, we expect it to update the votes attribute for that Product, increasing it by one.
 
 While the child can read its props, it can’t modify them.
 
 We need a way for the Product component to let ProductList know that a click on its up-vote icon occurred. We can then have ProductList, the owner of the product’s data, update the vote count for that product. The updated data will then flow downward from the ProductList component to the Product component.
 
-## Propagating the event
+#### Propagating the event
 We know that parents communicate data to children through props. Because props are immutable, children need some way to communicate events to parents. The parents could then make whatever data changes might be necessary.
 
 Functions passed down through props are the canonical manner in which children communicate events with their parent components.
@@ -241,7 +238,7 @@ logs a message to the console.
 
 Here’s the odd part: When working inside render(), we’ve witnessed that this is always bound to the component. But inside our custom component method handleUpVote(), this is actually null.
 
-## Binding custom component methods
+#### Binding custom component methods
 
 For the render() function, React binds this to the component for us.
 
@@ -267,7 +264,7 @@ At the moment, our app doesn’t have a place to store and manage data.
 
 What our app is currently missing is state.
 
-## Using state
+### Using state
 
 Whereas props are immutable and owned by a component’s parent, state is owned by the component. this.state is private to the component and as we’ll see can be updated with this.setState().
 
@@ -296,7 +293,7 @@ For all state modifications after the initial state, React provides components t
 
 The component will mount with an empty state this.state.products array. After mounting, we populate the state with data from Seed. The component will re-render and our products will be displayed. This happens at a speed that is imperceptible to the user.
 
-## Updating state and immutability
+### Updating state and immutability
 setState() is actually asynchronous. There is no guarantee when React will update the state and re-render our component. 
 
 Don't use .push inside setState(). concat() creates a new array that contains the elements of the array it was called on followed by the elements passed in as arguments.
@@ -335,7 +332,8 @@ We use Object.assign() a lot for avoiding mutating objects.
 
 While we’re creating a new array, the variable product here still references the product object sitting on the original array in state. Therefore, if we make changes to it we’ll be modifying the object in state. So we use Object.assign() to clone the original into a new object and then modify the votes property on that new object.
 
-# Refactoring with the Babel plugin
+### Refactoring with the Babel plugin
+Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
 We’ve been using Babel in this project to give us the ability to write modern JavaScript.
 
 ES6 (ES2015), JSX => ES5 JS
