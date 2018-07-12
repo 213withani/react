@@ -1,9 +1,9 @@
 # Components
 ## Your first Web app summary
-* Simple static structure
-* Create all your static components
-* Data-driven components, use props
-* Dynamic components, use state
+1. Simple static structure
+1. Create all your static components
+1. Data-driven components, use props
+1. Dynamic components, use state
 
 ## Previous Chapter
 * React organizes apps into components and how data flows between parent and child components.
