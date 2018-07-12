@@ -1,4 +1,5 @@
 https://lucasmreis.github.io/blog/simple-react-patterns/
+https://reactjs.org/docs/faq-ajax.html
 
 modified https://daveceddia.com/ajax-requests-in-react/
 
