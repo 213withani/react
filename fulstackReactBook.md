@@ -1,15 +1,11 @@
-# First React Web Application
+# First React Web Application (Page 6-54)
 
 ## Building Product Hunt
-### Simple voting app 
+### Simple voting app (https://www.producthunt.com/)
 
-React approach to front end development.
+React approach to Front End Development.
 
 ### Getting started
-React’s most important concepts at a high-level before diving into them in subsequent sections.
-
-All products are sorted instantaneously by number of votes.
-
 Node apps contain a package.json which specifies the dependencies of the project.
 
 cd voting_app/
@@ -20,10 +16,26 @@ Browser will open to localhost:3000 and serve voting_app/index.html
 For this project, we’re using Semantic UI for styling.
 
 ```js
-<div>
- <h1>Popular Products</h1>
- <div id="content"></div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Project One</title>
+  <link rel="stylesheet" href="./semantic-dist/semantic.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="vendor/babel-standalone.js"></script>
+  <script src="vendor/react.js"></script>
+  <script src="vendor/react-dom.js"></script>
+</head>
+<body>
+  <div >
+    <h1>Popular Products</h1>
+    <div id="content"></div>
+  </div>
+  <script src="./js/seed.js"></script>
+  <script type="text/babel" data-plugins="transform-class-properties" src="./js/app-2.js"></script>
+</body>
+</html>
 ```
 
 Building a React app is all about components.
