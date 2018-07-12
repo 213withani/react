@@ -8,12 +8,12 @@ React approach to Front End Development.
 ### Getting started
 Node apps contain a package.json which specifies the dependencies of the project.
 
-cd voting_app/
-npm install
-npm start
-Browser will open to localhost:3000 and serve voting_app/index.html
+* cd voting_app/
+* npm install
+* npm start
+* Browser will open to localhost:3000 and serve voting_app/index.html
 
-For this project, we’re using Semantic UI for styling.
+For this project, we’re using Semantic UI for styling. (Try semantic cdn or downloading it to a folder)
 
 ```js
 <!DOCTYPE html>
@@ -43,11 +43,7 @@ Building a React app is all about components.
 1. ProductList: Contains a list of product components 
 2. Product: Displays a given product
 
-Self-contained and reusable: 
-
-The markup, view logic, and often component-specific style is all housed in one place. 
-
-In React, when the inputs for a component change, the framework simply re-renders that component.
+Self-contained and reusable: The markup, view logic, and often component-specific style is all housed in one place. 
 
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
 
