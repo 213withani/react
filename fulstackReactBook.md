@@ -41,9 +41,9 @@ For this project, we’re using Semantic UI for styling. (Try semantic cdn or do
 * Building a React app is all about components.
 * Self-contained and reusable: The markup, view logic, and often component-specific style is all housed in one place. 
 
+### JSX
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
 
-### JSX
 * JSX represents a light abstraction over the JavaScript version.
 * React allows us to describe a component’s HTML representation in JavaScript.
 * render() describes the view.
@@ -157,7 +157,8 @@ Builds a new array by using the return value from each function call.
 * This page still lacks interactivity.
 * React's true power: creating dynamic interfaces.
 
-## React the vote (your app’s first interaction)
+## React the vote 
+### (your app’s first interaction)
 While the child can read its props, it can’t modify them.
 
 ### The Goal
@@ -182,7 +183,7 @@ logs a message to the console.
 
 Here’s the odd part: When working inside render(), we’ve witnessed that this is always bound to the component. But inside our custom component method handleUpVote(), this is actually null.
 
-#### Binding custom component methods
+### Binding custom component methods
 
 For the render() function, React binds this to the component for us.
 
@@ -238,12 +239,14 @@ For all state modifications after the initial state, React provides components t
 The component will mount with an empty state this.state.products array. After mounting, we populate the state with data from Seed. The component will re-render and our products will be displayed. This happens at a speed that is imperceptible to the user.
 
 ### Updating state and immutability
+#### setState()
 setState() is actually asynchronous. There is no guarantee when React will update the state and re-render our component. 
 
 Don't use .push inside setState(). concat() creates a new array that contains the elements of the array it was called on followed by the elements passed in as arguments.
 
 Treat the state object as immutable. It’s important to understand which Array and Object methods modify the objects they are called on.
 
+#### Object.assign
 Instead, we should create a new array of products. And if we modify one of the product objects, we should modify a clone of the object as opposed to the original one.
 
 ```
@@ -263,20 +266,18 @@ voting_app/public/js/app-9.js
       products: nextProducts,
     });
 }
-
 ```
-
+### SUMMARY (State and immutability)
 we check if the current product matches productId. If it does, we create a new object, copying over the properties from the original product object. We then overwrite the votes property on our new product object. We set it to the incremented vote count.
-
 ```
 Object.assign({}, product, {votes: product.votes + 1,})
 ```
-
 We use Object.assign() a lot for avoiding mutating objects.
 
+#### .map
 While we’re creating a new array, the variable product here still references the product object sitting on the original array in state. Therefore, if we make changes to it we’ll be modifying the object in state. So we use Object.assign() to clone the original into a new object and then modify the votes property on that new object.
 
-### Refactoring with the Babel plugin
+## Refactoring with the Babel plugin
 Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
 We’ve been using Babel in this project to give us the ability to write modern JavaScript.
 
