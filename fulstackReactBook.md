@@ -48,15 +48,11 @@ Self-contained and reusable: The markup, view logic, and often component-specifi
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
 
 ### JSX
-React components ultimately render HTML which is displayed in the browser.
-
-render() describes the view.
-
-React allows us to describe a component’s HTML representation in JavaScript.
-
-DOM = HTML Tree
-
-JSX presents a light abstraction over the JavaScript version
+* JSX represents a light abstraction over the JavaScript version.
+* React components ultimately render HTML which is displayed in the browser.
+* React allows us to describe a component’s HTML representation in JavaScript.
+* render() describes the view.
+* DOM = HTML Tree
  
 ### app-1.js
 render this ProductList inside a specific DOM node
