@@ -2,6 +2,8 @@
 # Thinking in React
 https://reactjs.org/docs/thinking-in-react.html
 
+https://medium.com/learning-new-stuff/building-your-first-react-js-app-d53b0c98dc
+
 # Redux
 https://stackoverflow.com/questions/39029454/what-does-ref-and-node-refer-to-in-react-redux
 
