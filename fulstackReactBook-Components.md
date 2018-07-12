@@ -5,6 +5,12 @@
 1. Data-driven components, use props
 1. Dynamic components, use state
 
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+
 ## Previous Chapter
 * React organizes apps into components and how data flows between parent and child components.
 * How we manage state and pass data between components using props.
