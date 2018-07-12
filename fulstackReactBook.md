@@ -133,16 +133,19 @@ We cannot use any reserved JavaScript words in JSX. class is a reserved word. Th
 Seed.products
 
 ### Using Props
+#### Product Component
 We want to modify our Product component so that it no longer uses static, hard-coded attributes.
 
 Product should accept data passed down from its parent ProductList
 
+#### ProductList Component
 Structure in this way enables our ProductList component to dynamically render any number of Product components.
 
 The way data flows from parent to child in React is through props.
 
 When a parent renders a child, it can send along props the child depends on.
 
+#### Props
 Declaration of props:
 <Component [propName]=[propValue]/>
 
@@ -153,6 +156,7 @@ Now the ProductList component is passing props down to Product.
 
 In React, a component can access all its props through the object this.props.
 
+#### Dynamic, data driven components
 Interweaving props with HTML elements in this way is how we create dynamic, data-driven React components.
 
 Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
