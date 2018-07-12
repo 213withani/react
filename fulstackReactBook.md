@@ -1,7 +1,7 @@
 # First React Web Application (Page 6-54)
 
-## Building Product Hunt
-### Simple voting app (https://www.producthunt.com/)
+## Building [Product Hunt](https://www.producthunt.com/)
+### Simple voting app 
 
 React approach to Front End Development.
 
