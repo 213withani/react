@@ -38,12 +38,8 @@ For this project, we’re using Semantic UI for styling. (Try semantic cdn or do
 </html>
 ```
 
-Building a React app is all about components.
-
-1. ProductList: Contains a list of product components 
-2. Product: Displays a given product
-
-Self-contained and reusable: The markup, view logic, and often component-specific style is all housed in one place. 
+* Building a React app is all about components.
+* Self-contained and reusable: The markup, view logic, and often component-specific style is all housed in one place. 
 
 Using JSX enables us to write the markup for our component views in a familiar, HTML-like syntax.
 
@@ -84,6 +80,9 @@ ReactDOM.render([what], [where]);
 ## Product Component
 ### ProductList now renders Product Component
 We now have two React components being rendered in our app.
+1. ProductList: Contains a list of product components 
+2. Product: Displays a given product
+
 ### app-2.js
 ```js
 class ProductList extends React.Component {
@@ -152,7 +151,6 @@ We cannot use any reserved JavaScript words in JSX. class is a reserved word. Th
 * Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
 
 ### Rendering multiple products
-
 #### Array's map
 Builds a new array by using the return value from each function call.
 
