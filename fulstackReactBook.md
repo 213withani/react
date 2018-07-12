@@ -267,15 +267,15 @@ voting_app/public/js/app-9.js
     });
 }
 ```
+#### .map
+While we’re creating a new array, the variable product here still references the product object sitting on the original array in state. Therefore, if we make changes to it we’ll be modifying the object in state. So we use Object.assign() to clone the original into a new object and then modify the votes property on that new object.
+
 ### SUMMARY (State and immutability)
 we check if the current product matches productId. If it does, we create a new object, copying over the properties from the original product object. We then overwrite the votes property on our new product object. We set it to the incremented vote count.
 ```
 Object.assign({}, product, {votes: product.votes + 1,})
 ```
 We use Object.assign() a lot for avoiding mutating objects.
-
-#### .map
-While we’re creating a new array, the variable product here still references the product object sitting on the original array in state. Therefore, if we make changes to it we’ll be modifying the object in state. So we use Object.assign() to clone the original into a new object and then modify the votes property on that new object.
 
 ## Refactoring with the Babel plugin
 Babel is a JavaScript transpiler. Babel turns ES6 code into ES5 code.
@@ -289,7 +289,7 @@ Using this feature, we can drop constructor(). There is no need for the manual b
 
 If we write a custom component method in which we want this bound to the component, we write it as an arrow function.
 
-### SUMMARY
+### SUMMARY (bind vs no bind using arrow function)
 In sum, we can use property initializers to make two refactors to our React components:
 1. We can use arrow functions for custom component methods (and avoid having to bind this)
 2. We can define the initial state outside of constructor()
