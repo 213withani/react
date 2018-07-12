@@ -81,9 +81,10 @@ ReactDOM.render([what], [where]);
 * We specified that we wanted Babel to transpile ES6 code to ES5. 
 * We then used ReactDOM.render() to write this component to the DOM.
 
-### Product Component
-#### ProductList now renders Product Component
+## Product Component
+### ProductList now renders Product Component
 We now have two React components being rendered in our app.
+### app-2.js
 ```js
 class ProductList extends React.Component {
   render() {
@@ -124,15 +125,14 @@ ReactDOM.render(
   document.getElementById('content')
 );
 ```
-#### JSX
-Because it runs in the browser as JavaScript, we cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
+### JSX
+We cannot use any reserved JavaScript words in JSX. class is a reserved word. Therefore, React has us use the attribute name className. Later, when the HTML element reaches the page, this attribute name will be written as class.
 
-
-### Making Product data-driven
-#### The data model
+## Making Product data-driven
+### The data model
 Seed.products
 
-#### Using Props
+### Using Props
 We want to modify our Product component so that it no longer uses static, hard-coded attributes.
 
 Product should accept data passed down from its parent ProductList
