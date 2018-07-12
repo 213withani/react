@@ -150,24 +150,20 @@ We cannot use any reserved JavaScript words in JSX. class is a reserved word. Th
 * Interweaving props with HTML elements in this way is how we create dynamic, data-driven React components.
 * Our Product component is now data-driven. Based on the props it receives it can render any product that we’d like.
 
-### Rendering multiple products
-#### Array's map
+## Rendering multiple products
+### Array's map
 Builds a new array by using the return value from each function call.
 
-This page still lacks interactivity.
+* This page still lacks interactivity.
+* React's true power: creating dynamic interfaces.
 
-React's true power: creating dynamic interfaces.
-
-Let’s start with something simple: the ability to up-vote a given product.
-
-### React the vote (your app’s first interaction)
-When the up-vote button on each one of the Product components is clicked, we expect it to update the votes attribute for that Product, increasing it by one.
-
+## React the vote (your app’s first interaction)
 While the child can read its props, it can’t modify them.
 
+### The Goal
 We need a way for the Product component to let ProductList know that a click on its up-vote icon occurred. We can then have ProductList, the owner of the product’s data, update the vote count for that product. The updated data will then flow downward from the ProductList component to the Product component.
 
-#### Propagating the event
+### Propagating the event
 We know that parents communicate data to children through props. Because props are immutable, children need some way to communicate events to parents. The parents could then make whatever data changes might be necessary.
 
 Functions passed down through props are the canonical manner in which children communicate events with their parent components.
