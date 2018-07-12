@@ -51,3 +51,11 @@ Next
 
 At that point, we’ll have the data flow from parent to child in place. Then we can add inverse data flow, propagating events from child to parent.
 
+# Develop app from scratch
+1. Break the app into components
+2. Build a static version of the app (pass down static props)
+3. Determine what should be stateful (which component you want to interact with)
+4. Determine in which component each piece of state should live (usually parent)
+5. Hard-code initial states
+6. Add inverse data flow (child notifies parent)
+7. Add server communication
