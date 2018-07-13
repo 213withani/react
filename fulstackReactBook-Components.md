@@ -170,4 +170,18 @@ These bottom-level components — also known as leaf components — hold the maj
 
 The components above leaf components are primarily concerned with orchestration.
 
+We must evolve it from its static existence to a mutable one. 
+
+## Step 3: Determine what should be stateful
+
+### TimersDashboard
+ It sets one prop, which is the isOpen boolean that is passed down to ToggleableTimerForm.
+### EditableTimerList
+ Passes down Timer’s properties.
+### EditableTimer
+This uses the prop editFormOpen. 
+### Timer
+This uses all the props for a timer. 
+### TimerForm
+This has two interactive input fields, one for title and one for project. When editing an existing timer, these fields are initialized with the timer’s current values.
 
