@@ -90,4 +90,31 @@ if (this.props.editFormOpen) {
 } else {
  return ( <Timer/>);
 
+TimerForm
+
+<div className='field'>
+ <label>Title</label>
+ <input type='text' defaultValue={this.props.title} /> 
+</div>
+
+<div className='field'>
+ <label>Project</label>
+ <input type='text' defaultValue={this.props.project} />
+</div>
+
+<div className='ui two bottom attached buttons'>
+  <button className='ui basic blue button'>
+   {submitText}
+  </button>
+  
+  <button className='ui basic red button'>
+   Cancel
+  </button>
+</div>
+            
 ```
+
+We’ll use TimerForm again within ToggleableTimerForm for creating timers. ToggleableTimerForm will not pass TimerForm any props. this.props.title and this.props.project will therefore return undefined and the fields will be left empty.
+
+submitText variable uses the presence of this.props.title to determine what text the submit button at the bottom of the form should display. If title is present, we know we’re editing an existing timer, so it displays “Update.” Otherwise, it displays “Create.”
+
