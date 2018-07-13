@@ -162,3 +162,12 @@ class Timer
 </div>
         
 ```
+
+Inside TimersDashboard are two child components: EditableTimerList and ToggleableTimerForm.
+EditableTimerList contains two EditableTimer components. The first of these has a Timer component as a child and the second a TimerForm. 
+
+These bottom-level components — also known as leaf components — hold the majority of the page’s HTML. This is generally the case. 
+
+The components above leaf components are primarily concerned with orchestration.
+
+
