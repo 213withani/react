@@ -77,9 +77,8 @@ We will define EditableTimerList next. We’ll have it render two EditableTimer 
 EditableTimerList
 
 <div id='timers'>
-  <EditableTimer title='Learn React' project='Web Domination' editFormOpen={false} />
-  <EditableTimer title='Learn extreme ironing' project='World Domination' editFormOpen={true}
-  /> 
+  <EditableTimer editFormOpen={false} />
+  <EditableTimer editFormOpen={true} /> 
 </div>
 
 EditableTimer
