@@ -74,10 +74,21 @@ This component renders its two child components nested under div tags.
 
 We will define EditableTimerList next. We’ll have it render two EditableTimer components. One will end up rendering a timer’s face. The other will render a timer’s edit form
 ```js
+EditableTimerList
+
 <div id='timers'>
-  <EditableTimer editFormOpen={false} />
-  <EditableTimer
-    title='Learn extreme ironing' project='World Domination' editFormOpen={true}
+  <EditableTimer title='Learn React' project='Web Domination' editFormOpen={false} />
+  <EditableTimer title='Learn extreme ironing' project='World Domination' editFormOpen={true}
   /> 
 </div>
+
+EditableTimer
+
+if (this.props.editFormOpen) { 
+ return (
+  <TimerForm />
+ );
+} else {
+ return ( <Timer/>);
+
 ```
