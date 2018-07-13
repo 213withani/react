@@ -118,3 +118,47 @@ We’ll use TimerForm again within ToggleableTimerForm for creating timers. Togg
 
 submitText variable uses the presence of this.props.title to determine what text the submit button at the bottom of the form should display. If title is present, we know we’re editing an existing timer, so it displays “Update.” Otherwise, it displays “Create.”
 
+ToggleableTimerForm. Recall that this is a wrapper component around TimerForm. It will display either a “+” or a TimerForm. Right now, it accepts a single prop, isOpen.
+
+```
+class ToggleableTimerForm extends React.Component { render() {
+if (this.props.isOpen) { 
+  return (
+        <TimerForm />
+  );
+} else { 
+  return (
+    <div className='ui basic content center aligned segment'>
+          <button className='ui basic button icon'>
+            <i className='plus icon' />
+          </button>
+    </div> 
+);
+} }
+}
+
+time_tracking_app/public/js/app-1.js
+class Timer
+
+<div className='header'> 
+ {this.props.title}
+</div>
+
+<div className='meta'> 
+ {this.props.project}
+</div>
+
+<div className='extra content'>
+  <span className='right floated edit icon'>
+     <i className='edit icon' />
+  </span>
+  <span className='right floated trash icon'>
+      <i className='trash icon' />
+  </span> 
+</div>
+        
+<div className='ui bottom attached blue basic button'>
+ Start
+</div>
+        
+```
