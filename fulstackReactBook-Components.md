@@ -212,6 +212,7 @@ We’ll define our initial states within the components themselves. This means h
 
 ```
 class TimersDashboard extends React.Component {
+  // no constructor
   state = {
     timers: [
       {
@@ -226,6 +227,7 @@ class TimersDashboard extends React.Component {
       }, 
     ],
    };
+   
     render() {
       return (
         <div className='column'>
@@ -234,6 +236,70 @@ class TimersDashboard extends React.Component {
         </div> 
      );
    } 
+   
  }
 ```
 
+Receiving props in EditableTimerList
+
+```
+
+class EditableTimerList extends React.Component {
+  render() {
+    const timers = this.props.timers.map((timer) => (
+    
+      <EditableTimer
+        key={timer.id}
+        id={timer.id}
+        title={timer.title}
+        project={timer.project}
+        />
+        
+    )); 
+    
+    return (
+      <div id='timers'>
+        {timers}
+      </div> );
+  } 
+}
+```
+## Props vs. state
+ What existed as mutable state in Timers-
+Dashboard is passed down as immutable props to EditableTimerList.
+
+Once you understand state, you can see how props act as its one-way data pipeline. State is managed in some select parent components and then that data flows down through children as props.
+
+## Adding state to EditableTimer
+In the static version of our app, EditableTimer relied on editFormOpen as a prop to be passed down
+from the parent. We decided that this state could actually live here in the component itself.
+
+We’ll set the initial value of editFormOpen to false, which means that the form starts off as closed. We’ll also pass the id property down the chain:
+
+```
+class EditableTimer extends React.Component {
+  state = {
+    editFormOpen: false,
+  };
+
+ render() {
+    if (this.state.editFormOpen) {
+      return (
+        <TimerForm
+          id={this.props.id}
+          title={this.props.title}
+          project={this.props.project}
+        />
+      );
+    } else {
+      return (
+        <Timer
+          id={this.props.id}
+          title={this.props.title}
+          project={this.props.project}
+       /> 
+     );
+   } 
+ }
+}
+```
