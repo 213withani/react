@@ -194,3 +194,14 @@ So, outside of TimerForm, we’ve identified our stateful data:
 • Whether or not the create form is open
 
 ## Step 4: Determine in which component each piece of state should live
+
+ToggleableTimerForm does not need the state to render, but it can affect state. It needs to be able to insert a new timer. It will propagate the data for the new timer up to TimersDashboard.
+
+Storing the state in EditableTimer will be fine for our current needs. But there are a few requirements that might require us to “hoist” this state up higher in the component hierarchy in the future.
+
+TimersDashboard doesn’t appear to care about whether ToggleableTimerForm is open or closed.
+
+So, in summary, we’ll have three pieces of state each in three different components:
+• Timer data will be owned and managed by TimersDashboard.
+• Each EditableTimer will manage the state of its timer edit form.
+• The ToggleableTimerForm will manage the state of its form visibility.
