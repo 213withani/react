@@ -303,3 +303,9 @@ class EditableTimer extends React.Component {
  }
 }
 ```
+
+Using a combination of state, the value attribute, and the onChange attribute is the canonical method
+we use to write form elements in React.
+
+# Step 6: Add inverse data flow
+
