@@ -185,3 +185,12 @@ This uses all the props for a timer.
 ### TimerForm
 This has two interactive input fields, one for title and one for project. When editing an existing timer, these fields are initialized with the timer’s current values.
 
+## Step 3: Determine what should be stateful
+Read https://reactjs.org/docs/thinking-in-react.html
+  
+So, outside of TimerForm, we’ve identified our stateful data:
+• The list of timers and properties of each timer 
+• Whether or not the edit form of a timer is open 
+• Whether or not the create form is open
+
+## Step 4: Determine in which component each piece of state should live
