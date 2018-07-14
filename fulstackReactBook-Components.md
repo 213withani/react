@@ -120,7 +120,7 @@ submitText variable uses the presence of this.props.title to determine what text
 
 ToggleableTimerForm. Recall that this is a wrapper component around TimerForm. It will display either a “+” or a TimerForm. Right now, it accepts a single prop, isOpen.
 
-```
+```js
 class ToggleableTimerForm extends React.Component { render() {
 if (this.props.isOpen) { 
   return (
@@ -210,7 +210,7 @@ So, in summary, we’ll have three pieces of state each in three different compo
 We’ll define our initial states within the components themselves. This means hard-coding a list of timers in the top-level component, TimersDashboard. For our two other pieces of state, we’ll have the components’ forms closed by default.
 
 
-```
+```js
 class TimersDashboard extends React.Component {
   // no constructor
   state = {
@@ -242,7 +242,7 @@ class TimersDashboard extends React.Component {
 
 Receiving props in EditableTimerList
 
-```
+```js
 
 class EditableTimerList extends React.Component {
   render() {
@@ -276,7 +276,7 @@ from the parent. We decided that this state could actually live here in the comp
 
 We’ll set the initial value of editFormOpen to false, which means that the form starts off as closed. We’ll also pass the id property down the chain:
 
-```
+```js
 class EditableTimer extends React.Component {
   state = {
     editFormOpen: false,
