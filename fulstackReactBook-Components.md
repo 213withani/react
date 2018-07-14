@@ -205,3 +205,35 @@ So, in summary, we’ll have three pieces of state each in three different compo
 • Timer data will be owned and managed by TimersDashboard.
 • Each EditableTimer will manage the state of its timer edit form.
 • The ToggleableTimerForm will manage the state of its form visibility.
+
+# Step 5: Hard-code initial states
+We’ll define our initial states within the components themselves. This means hard-coding a list of timers in the top-level component, TimersDashboard. For our two other pieces of state, we’ll have the components’ forms closed by default.
+
+
+```
+class TimersDashboard extends React.Component {
+  state = {
+    timers: [
+      {
+        title: 'Practice squat',
+        project: 'Gym Chores',
+        id: uuid.v4(),
+      }, 
+      {
+        title: 'Bake squash',
+        project: 'Kitchen Chores',
+        id: uuid.v4(),
+      }, 
+    ],
+   };
+    render() {
+      return (
+        <div className='column'>
+          <EditableTimerList timers={this.state.timers} />
+          <ToggleableTimerForm />
+        </div> 
+     );
+   } 
+ }
+```
+
