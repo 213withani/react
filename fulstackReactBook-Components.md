@@ -355,3 +355,19 @@ To display an edit form, the user clicks on the edit icon on a Timer. This shoul
 Both EditableTimer and Toggleable- TimerForm are just intermediaries between TimerForm and TimersDashboard.
 
 Like ToggleableTimerForm, EditableTimer doesn’t do anything with the incoming timer.
+
+## Updating EditableTimerList (page 99)
+
+send the submit function from TimersDashboard to each EditableTimer:
+
+## Defining onEditFormSubmit() in TimersDashboard
+For updates, we need to hunt through the timers array
+
+If the timer’s id matches that of the form submitted, we’ll return a new object that contains the timer with the updated attributes.
+
+## Deleting timers
+### Adding the event handler to Timer
+we’re going to need the id to sort out which timer is being deleted. handleTrashClick() provides the id to this function.
+
+## Implementing the delete function in TimersDashboard
+The last step is to define the function in TimersDashboard that deletes the desired timer from the state array. 
