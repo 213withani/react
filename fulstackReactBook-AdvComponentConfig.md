@@ -31,3 +31,19 @@ stateful components. Any time a component needs to hold on to a dynamic piece of
 For instance, when a light switch is turned on, that light switch is holding the state of “on.” Turning a light off can be described as flipping the state of the light to “off.”
 
 We’ll refer to components that hold local-mutable data as stateful components.
+
+## Returning a New Function
+
+This is a common pattern for passing arguments to handlers. We close over the choice argument when we call select. select returns a new function that will call setState with the appropriate choice.
+
+whenever a state update depends on the current state, it is preferable to pass a function to setState()
+
+```js
+  decrement = () => {
+    this.setState(prevState => {
+      return {
+        value: prevState.value - 1
+      };
+    });
+  };
+```
