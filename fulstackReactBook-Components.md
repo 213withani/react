@@ -317,7 +317,16 @@ time_tracking_app/public/js/app-3.js
   <button className='ui basic red button' onClick={this.props.onFormClose}>
        Cancel
   </button>
-              
+   
+time_tracking_app/public/js/app-3.js
+  handleSubmit = () => {
+    this.props.onFormSubmit({
+      id: this.props.id,
+      title: this.state.title,
+      project: this.state.project,
+}); };
+
+
 time_tracking_app/public/js/app-3.js
 render() {
     const submitText = this.props.id ? 'Update' : 'Create';
