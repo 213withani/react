@@ -308,5 +308,21 @@ Using a combination of state, the value attribute, and the onChange attribute is
 we use to write form elements in React.
 
 # Step 6: Add inverse data flow
+```js
+time_tracking_app/public/js/app-3.js
+  <button className='ui basic blue button' onClick={this.handleSubmit}>
+       {submitText}
+  </button>
+  
+  <button className='ui basic red button' onClick={this.props.onFormClose}>
+       Cancel
+  </button>
+              
+time_tracking_app/public/js/app-3.js
+render() {
+    const submitText = this.props.id ? 'Update' : 'Create';
 
+```
+
+We have submitText switch on id as opposed to title. Using the id property to determine whether or not an object has been created is a more common practice.
 
