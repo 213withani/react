@@ -47,3 +47,7 @@ whenever a state update depends on the current state, it is preferable to pass a
     });
   };
 ```
+
+Whenever a state transition depends on the current state, using a function to set the state helps to avoid the chance for such enigmatic bugs to materialize.
+
+The only information we should ever put in state are values that are not computed and do not need to be sync’d across the app.
