@@ -335,3 +335,23 @@ render() {
 
 We have submitText switch on id as opposed to title. Using the id property to determine whether or not an object has been created is a more common practice.
 
+Remember, ToggleableTimerForm is not the manager of timer state. TimerForm has an event it’s emitting, in this case the submission of a new timer. ToggleableTimerForm is just a proxy of this message.
+
+handleFormSubmit() accepts the argument timer. Recall that in TimerForm this argument is an object containing the desired timer properties. We just pass that argument along here.
+
+TimersDashboard: handling the events we’re capturing down at the leaf components.
+
+Event - submission of a form: a new timer is being created or an existing one is being updated. 
+To display an edit form, the user clicks on the edit icon on a Timer. This should propagate an event up to EditableTimer and tell it to flip its child component, opening the form.
+
+```js
+ <span onClick={this.props.onEditClick}>
+      <i className='edit icon' />
+ </span>
+```
+
+To display an edit form, the user clicks on the edit icon on a Timer. This should propagate an event up to EditableTimer and tell it to flip its child component, opening the form.
+
+Both EditableTimer and Toggleable- TimerForm are just intermediaries between TimerForm and TimersDashboard.
+
+Like ToggleableTimerForm, EditableTimer doesn’t do anything with the incoming timer.
