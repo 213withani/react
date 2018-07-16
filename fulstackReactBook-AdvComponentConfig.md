@@ -51,3 +51,18 @@ whenever a state update depends on the current state, it is preferable to pass a
 Whenever a state transition depends on the current state, using a function to set the state helps to avoid the chance for such enigmatic bugs to materialize.
 
 The only information we should ever put in state are values that are not computed and do not need to be sync’d across the app.
+
+# Stateless components
+
+We won’t reference this when working with functional, stateless components.
+
+React does allow us to use propTypes and defaultProps on stateless components.
+
+stateful components often spread complexity throughout a system.
+
+If we don’t need any lifecycle methods and can get away with only a rendering function, using a stateless component is a great choice.
+
+Generally, React will pass the this.props.children prop as a list of components if there are multiple children, whereas it will pass a single element if there is only one component.
+
+## SUMMARY
+By using state we hold on to component-local data, and we tell our components to re-render whenever that state changes
