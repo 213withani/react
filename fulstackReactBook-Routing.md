@@ -36,3 +36,10 @@ browser’s current location.
 str.match(regexp)
 The match() method retrieves the matches when matching a string against a regular expression.
 ex pathname.match(path)
+
+# Building Link
+
+When the user clicks on this tag, we’ll want the browser to skip its default routine of making a
+web request to fetch the next page.
+
+ 
