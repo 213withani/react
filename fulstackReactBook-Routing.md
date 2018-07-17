@@ -35,3 +35,4 @@ browser’s current location.
 
 str.match(regexp)
 The match() method retrieves the matches when matching a string against a regular expression.
+ex pathname.match(path)
