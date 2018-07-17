@@ -29,3 +29,48 @@ The framework cannot know how to seprate your concerns for you. It should only p
 React component: A highly cohesive building block for UIs loosely coupled with other components.
 
 Use components to separate your concerns. With the full power of JS.
+
+## Componets are reuseable, composable, unit testable
+
+Just don't write spaghetti code. 
+* Keep your componets small.
+* Only put display logic in your components. 
+
+# What about XSS?
+Creating DOM using function calls.
+
+# JSX
+JSX is an optional preprocessor to let you use HTML like syntax.
+
+The accessibility of templates and the power of JS.
+ 
+ # React
+ Re-render your app on every single data change.
+ 
+ ## Building UI is hard
+ ### because there is so much state.
+ 
+ Lots of UI elements, design iteration, crazy environments, mutable DOM (forgot to keep track of it), user input ...
+ 
+ When the data changes, React re-renders the entire component.
+ 
+ Components describe your UI at any point in time.
+ 
+ Re-rendering on every change makes things simple. Every place data is displayed is guaranteed to be up to date.
+ 
+ # 3. Virtual DOM
+ Makes re-rendering on every change fast.
+ 
+ You can't just throw out the DOM and rebuild it on each update. It's too slow and you'll lose form state and scroll position.
+ 
+ Built a virtual DOM and events system.
+ 
+ Usually faster than manual DOM operations.
+ 
+ Input some data and out a description of the DOM.
+ 
+ # SUMMARY 
+ * Components, not templates
+ * Re-render, don't mutate
+ ** Hard to think about mutation. Just throw out your old app and re-render the whole thing, have the implementation take care of it (Virtual DOM)
+ 
