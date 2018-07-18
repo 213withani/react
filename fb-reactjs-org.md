@@ -19,4 +19,8 @@ JSX produces React “elements”.
 
 rendering logic is inherently coupled with other UI logic
 
+visual aid when working with UI inside the JavaScript code.
+
+You can put any valid JavaScript expression, any valid unit of code that resolves to a value, inside the curly braces in JSX.
+
 
