@@ -4,17 +4,28 @@ https://techburst.io/learn-react-js-basics-in-two-hours-free-video-course-b159b3
 # ReactJS Tutorial for Beginners - Getting Started with React
 https://youtu.be/pgAvVxowaYU
 
+Reusable Components:
 ```js
-div
- h1 Max h1
- p Your age: 28
-div
+HTML
+<div class='person'>
+ <h1> Max </h1>
+ <p> Your age: 28 </p> 
+<div>
 
-div
- h1 Max h1
- p Your age: 29
-div
+<div class='person'>
+ <h1> Manu </h1>
+ <p> Your age: 29 </p> 
+<div>
+
+REACT
+function Person (props) => {
+ <div className='person'>
+   <h1> {this.props.name} </h1>
+   <p> {this.props.age} </p> 
+ <div>
+}
 ```
+
 
 ```css
 .person {
