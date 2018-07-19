@@ -38,6 +38,10 @@ function Person (props) => {
 }
 ```
 
+Npm: Manage dependencies.
+Bundler: Webpack. Allows app to be modular. Puts all separate files together efficiently.
+Babel: Compiler: Compiles new code to older code for browser compatibility.
+Development server: Try to mimic how our application will work on a web server. Ex a link will not use a file protocol.
 
 # Rethinking best practices -- JSConf EU 2013
 https://www.youtube.com/watch?v=x7cQ3mrcKaY
