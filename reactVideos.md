@@ -1,6 +1,33 @@
 # reactjs basics video
 https://techburst.io/learn-react-js-basics-in-two-hours-free-video-course-b159b30b3ecb
 
+# ReactJS Tutorial for Beginners - Getting Started with React
+https://youtu.be/pgAvVxowaYU
+
+```js
+div
+ h1 Max h1
+ p Your age: 28
+div
+
+div
+ h1 Max h1
+ p Your age: 29
+div
+```
+
+```css
+.person {
+ display: inline-block; /*displays elements in the same line*/
+ margin: 0px;
+ border: 1px solid #eee; /*card layout*/
+ box-shadow: 0 2px 2px #ccc; 
+ width: 200px;
+ padding: 20px;
+}
+```
+
+
 # Rethinking best practices -- JSConf EU 2013
 https://www.youtube.com/watch?v=x7cQ3mrcKaY
 
