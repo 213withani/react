@@ -39,9 +39,17 @@ function Person (props) => {
 ```
 
 Npm: Manage dependencies.
-Bundler: Webpack: Allows app to be modular. Puts all separate JS files together efficiently.
-Babel: Compiler: Compiles new code to older code for browser compatibility.
+Bundler: Webpack: Allows app to be modular. Puts all separate JS files together efficiently. User will download 1 file (bundle).
+Babel: Compiler: Allows you to write modern JS (ES6, JSX). Compiles new code to older code for browser compatibility.
 Development server: Try to mimic how our application will work on a web server. Ex a link will not use a file protocol.
+ESLint:  checks your code and helps to write better code.
+
+ ES6 Modern JS.
+ JSX: Templating syntax. Write HMTL like syntax in JS.
+ 
+# Introduction to React
+ 
+
 
 # Rethinking best practices -- JSConf EU 2013
 https://www.youtube.com/watch?v=x7cQ3mrcKaY
