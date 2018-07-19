@@ -48,8 +48,14 @@ ESLint:  checks your code and helps to write better code.
  JSX: Templating syntax. Write HMTL like syntax in JS.
  
 # Introduction to React
- 
+https://youtu.be/_ZTT9kw3PIE
+@ 1 minute
+Basic definitons and setup
 
+ @ 30 minutes:
+You can incremental adopt React if you have an existing app, unlike Angular.
+
+Components: Custom HTML element
 
 # Rethinking best practices -- JSConf EU 2013
 https://www.youtube.com/watch?v=x7cQ3mrcKaY
