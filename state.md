@@ -16,3 +16,11 @@ http://singlepageappbook.com/goal.html
 state is interactions
 
 URL = state
+
+# What is state (simple w/ water analogy)
+https://thinkster.io/tutorials/understanding-react-state
+“state” is what allows you to create components that are dynamic and interactive.
+
+What’s the difference between water and ice? Temperature
+* With water, simply put it in your freezer (below 32F) and its state will change from liquid to a solid. 
+* If you put it on a hot stovetop (above 212F), its state will change from liquid to gas. 
