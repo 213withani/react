@@ -2,6 +2,8 @@
 # react
 http://www.hackingwithreact.com/
 
+https://s3.amazonaws.com/daveceddia.com/Pure+React+-+sample+chapters.pdf
+
 # Thinking in React
 https://reactjs.org/docs/thinking-in-react.html
 
